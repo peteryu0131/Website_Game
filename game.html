@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+   <title>Game</title>
+   <script src="game.js" type="text/javascript" defer></script>
+
+
+</head>
+<body onkeydown="doKeyDown(event)" >
+
+    <header>
+        <h1 class="title">Prey-Ball</h1>
+  
+     
+    </header>
+   
+    <main>
+        
+
+        <canvas id="game" height="600" width="600"></canvas><br>
+
+        <div class="rule">
+
+        <h2 class="ruletopic">How to play ?</h2>
+
+        <p>
+
+            1. User can use keyboard to control the direstion.<br>
+            2. User can change the difficulty by selecting speed and time.<br>
+            3. Red ball is bomb, if user eat the bomb, the ball will get small<br>
+            4. Click the start button to start a game and start timing<br>
+            5. Click the reset button to resize the ball and reset the timer<br> 
+            6. If the ball get big enough, the page will alert a winner message<br>
+            7. If the time is up, the page will alert a box and asking restart<br>
+            
+
+
+        </p>
+
+        </div>
+
+        <div class = "timer">
+            
+            <h2 id ="timeDisplay">Click Start Button to count time !</h2>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+       <div class="select">
+        <p>
+            <h2>Please Select the Moving Speed: </h2>
+            <select id ="speed">
+                <option value = "normal">NORMAL SPEED</option>
+                <option value = "slow">SLOW SPEED</option>
+                <option value = "fast">FAST SPEED</option>
+            </select>
+        </p>
+        
+        </div>
+
+        <div class="select">
+            <p>
+                <h2>Please Select the Game Time: </h2>
+                <select id ="gameTime">
+                    <option value = "60s">ONE MINUTE</option>
+                    <option value = "30s">30 Seconds</option>
+                    <option value = "90s">90 Seconds</option>
+                </select>
+            </p>
+        </div>
+
+        
+        <button type=“button” class ="button" onclick= "start()">Start</button>
+
+        <button type=“button” class ="button" onclick= "restart()">Restart</button>
+
+
+
+    </footer>
+
+    <h3 class = "bottom">Name: Jingyao Yu</h3>
+    <h3>Student Number: 100299217</h3>
+
+
+    
+  
+</body>
+
+</html>
+
+
+<style>
+
+    canvas{
+
+    border: 20px double white;
+    background-image: url("background.png");
+    margin-right:  100px;
+    float: right;
+    margin-top: 50px;
+    
+   
+}
+
+
+.button {
+
+    background-color: rgb(44, 160, 73);
+    border: gold solid 3px;;
+    color: white;
+    padding: 13px 70px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;  
+    margin-left:  50px;
+    margin-top: 40px;
+    border-radius: 10px;
+    
+
+}
+
+
+
+div.rule {
+    border: 3px solid rgb(31, 46, 0) ;
+    padding: 8px;
+    padding-left: 20px;
+    margin-right: 65%;
+    font-size: 18px;
+    margin-left:  50px;
+    border-radius: 10px;
+
+}
+
+div.select {
+    border:yellowgreen solid 3px;
+    padding: 5px;
+    padding-left: 20px;
+    margin-top: 1.5%;
+    margin-right: 65%;
+    margin-left:  50px;
+    border-radius: 10px;
+
+}
+
+select {
+    font-size: 15px;
+}
+
+.ruletopic{
+    color: red;
+}
+
+.timer{
+
+    margin-left:  50px;
+    border: gold dotted 4px;
+    padding: 18px;
+    margin-right: 74%;
+    margin-top: 20px;
+    color: red;
+    border-radius: 10px;
+    
+}
+
+
+.title{
+
+    border-bottom: red double 6px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.7em;
+    text-align: center;
+    padding-bottom: 20px;
+
+    
+}
+
+.bottom{
+
+    padding: 10x;   
+    border-top: red double 6px;
+    padding-top: 20px;
+
+}
+
+
+
+</style>
